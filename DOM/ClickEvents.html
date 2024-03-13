@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <button>Click</button>
+    <a href="https://github.com/XLryan246"> Click </a>
+
+    <script>
+        const button = document.querySelector("button")
+        button.addEventListener("click", () => {
+            console.log("button pressed")
+        })
+
+        const hyperlink = document.querySelector("a")
+        hyperlink.addEventListener("click", (event) => {
+            event.preventDefault() //elemento nao faz o comportamento padrao dele, entao se eu clicar no link acima ele nao redireciona
+            console.log("hyperlink pressed")
+        })
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        .highlight {
+            color:aquamarine;
+        }
+    </style>
+</head>
+<body>
+
+    <h1 id="title">Title</h1>
+    <button id="change-class">Change class</button>
+    <script> 
+        const titleEl = document.querySelector("#title")
+
+        const buttonEl = document.querySelector("#change-class")
+        buttonEl.addEventListener("click" , () => {
+        //    if (titleEl.classList.contains("highlight")) {
+        //     titleEl.classList.remove("highlight")
+        //    } else {
+        //     titleEl.classList.add("highlight")
+        //    }
+
+        titleEl.classList.toggle("highlight") //faz o mesmo que a verificação do if de cima.
+        })
+    </script>
+</body>
+</html>

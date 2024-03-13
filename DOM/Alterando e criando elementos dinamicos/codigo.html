@@ -1,0 +1,51 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Curriculum</title>
+  </head>
+  <body>
+    <img src="foto.png" width="100" />
+    <h1 id="person-name" class="text">Seu Nome</h1>
+    <h2>Programador JavaScript</h2>
+    <p class="text">
+      Conhecimento em programação Frontend, Backend para desenvolvimento de
+      sistemas Fullstack.
+    </p>
+    <p>
+      Para mais detalhes, por favor, visite meu
+      <a href="https://github.com/XLryan246">Github</a>!
+    </p>
+    <script>
+      // -- Alterando um objeto do DOM -- 
+      // Ref.: https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement
+
+      const titleEl = document.querySelector("#person-name")
+      console.log("titleEl value:", titleEl.innerHTML)
+
+      titleEl.innerHTML = "Ryan Alves"
+      titleEl.style.color = "purple"
+
+
+
+      // -- Criando elementos dinâmicos com o DOM --
+
+      const subTitleEl = document.createElement("h2")
+      subTitleEl.innerHTML = "Projetos"
+
+      const pjListEl = document.createElement("ul")
+
+      const pjListItem1 = document.createElement("li")
+      pjListItem1.innerHTML = "Projeto 1"
+
+      const pjListItem2 = document.createElement("li")
+      pjListItem2.innerHTML = "Projeto 2"
+
+      const pjListItem3 = document.createElement("li")
+      pjListItem3.innerHTML = "Projeto 3"
+
+      pjListEl.append(pjListItem1,pjListItem2,pjListItem3)
+      document.body.append(subTitleEl, pjListEl)
+
+    </script>
+  </body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+
+    <h1 id="title">Title</h1>
+    <button id="change-color">Change color</button>
+    <script> 
+        const titleEl = document.querySelector("#title")
+
+        const buttonEl = document.querySelector("#change-color")
+        buttonEl.addEventListener("click" , () => {
+            titleEl.style = "color: grey; font-size: 55px;"
+        })
+    </script>
+</body>
+</html>
