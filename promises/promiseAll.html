@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PromiseAll</title>
+</head>
+
+<body>
+    <button>Execute</button>
+
+
+    <script>
+
+        function testPromise() {
+            console.log("Sync started")
+
+            const p1 = new Promise((resolve, reject) => {
+
+                setTimeout(() => {
+                    console.log(`p1 finished`)
+                    resolve(1)
+                }, 1000)
+            })
+
+            const p2 = new Promise((resolve, reject) => {
+
+                setTimeout(() => {
+                    console.log(`p2 finished`)
+                    resolve(2)
+                }, 2000)
+            })
+
+            const p3 = new Promise((resolve, reject) => {
+
+                setTimeout(() => {
+                    console.log(`p3 finished`)
+                    reject(3)
+                }, 3000)
+            })
+
+            console.log("Sync finished")
+
+            Promise.all([p1, p2, p3]).then((values) => {
+                console.log(`promises values ${values}`)
+            }).catch(() => {
+                console.log(`promises error`)
+            })
+
+
+        }
+        const buttonEl = document.querySelector("button")
+        buttonEl.addEventListener("click", testPromise)
+
+    </script>
+
+</body>
+
+</html>
