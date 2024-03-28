@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>working with JSON</title>
+</head>
+<body>
+    <script>
+        const person = {
+            name: "Ryan Alves",
+            age: 19,
+            address: {
+                street: "Rua central",
+                number: 77,
+                complement: "",
+                district: "Centro",
+                city: "São Paulo",
+                state:"São Paulo",
+            },
+        }
+
+        //console.log(person)
+
+        const personStr = JSON.stringify(person)
+        //console.log (personStr)
+
+        const personObj = JSON.parse(personStr)
+        console.log (personObj)
+        
+
+    </script>
+    
+</body>
+</html>
